@@ -13,23 +13,27 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Pizza App",
       home: Scaffold(
-          appBar: AppBar(
-            title: const Text(
-              "PIZZA",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-            ),
+        appBar: AppBar(
+          title: const Text(
+            "PIZZA",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
           ),
-          body: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40),
-            child: Column(
-              children: [
-                Text(
-                  "Pizza Palooza Because Ordinary Isn't an Option",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
-                )
-              ],
-            ),
-          )),
+        ),
+        
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 40),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                "Pizza Palooza Because Ordinary Isn't an Option",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
+              ),
+           
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
