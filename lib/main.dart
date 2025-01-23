@@ -11,6 +11,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: "Pizza App",
       home: Scaffold(
           appBar: AppBar(
             title: const Text(
@@ -24,10 +25,7 @@ class MainApp extends StatelessWidget {
               children: [
                 Text(
                   "Pizza Palooza Because Ordinary Isn't an Option",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 45
-                  ),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
                 )
               ],
             ),
