@@ -6,9 +6,14 @@ void main() {
   runApp(const MainApp());
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
   const MainApp({super.key});
 
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,13 +23,20 @@ class MainApp extends StatelessWidget {
         "/login": (context) => const LoginPage(),
         "/signup": (context) => const SignupPage(),
       },
-      home: const HomePage(),
+      home:  HomePage(),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+   HomePage({super.key});
+
+//  final  List _imagePath = [
+// "assets/images/image1.jpg"
+// "assets/images/image2.jpg"
+// "assets/images/image3.jpg"
+// "assets/images/image4.jpg"
+//   ];
 
   @override
   Widget build(BuildContext context) {
@@ -45,25 +57,25 @@ class HomePage extends StatelessWidget {
               "Pizza Palooza Because Ordinary Isn't an Option",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
             ),
-            Expanded(
-              child: GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 20,
-                      mainAxisSpacing: 20),
-                  itemCount: 4,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                          image: AssetImage("assets/image${index + 1}.jpg"),
-                          fit: BoxFit.cover
-                        ),
-                      ),
-                    );
-                  }),
-            ),
+            // Expanded(
+            //   child: GridView.builder(
+            //       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            //           crossAxisCount: 2,
+            //           crossAxisSpacing: 20,
+            //           mainAxisSpacing: 20),
+            //       itemCount: _imagePath.length,
+            //       itemBuilder: (context, index) {
+            //         return Container(
+            //           decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(10),
+            //             image: DecorationImage(
+            //               image: AssetImage("assets/image${index + 1}.jpg"),
+            //               fit: BoxFit.cover
+            //             ),
+            //           ),
+            //         );
+            //       }),
+            // ),
             MaterialButton(
               onPressed: () {
                 Navigator.pushNamed(context, "/login");
