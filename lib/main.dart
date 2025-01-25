@@ -23,7 +23,7 @@ class _MainAppState extends State<MainApp> {
         "/login": (context) => const LoginPage(),
         "/signup": (context) => const SignupPage(),
       },
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
