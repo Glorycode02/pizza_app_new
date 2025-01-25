@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:pizza_app/components/my_textfield.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SignupPage extends StatefulWidget {
+  const SignupPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignupPage> createState() => _SignupPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignupPageState extends State<SignupPage> {
+  final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
-
   final TextEditingController _passwordController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,9 +27,16 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(
               height: 34,
             ),
-            const Text("Pizza Delivery and Buying App"),
+            const Text("Create an Account at Pizza Delivery and Buying App"),
             const SizedBox(
               height: 30,
+            ),
+            MyTextfield(
+                controller: _usernameController,
+                labelText: "Username",
+                obscureText: false),
+            const SizedBox(
+              height: 35,
             ),
             MyTextfield(
                 controller: _emailController,
@@ -60,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 child: const Center(
                   child: Text(
-                    "Login",
+                    "Sign Up",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -73,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "Don't have an Account?",
+                  "Already have an Account?",
                   style: TextStyle(
                       color: Colors.grey, fontWeight: FontWeight.bold),
                 ),
@@ -82,10 +88,10 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, "/signup");
+                    Navigator.pushNamed(context, "/login");
                   },
-                  child: const Text(
-                    "Register Now",
+                  child:const Text(
+                    "Login",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
