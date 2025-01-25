@@ -54,21 +54,19 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text.rich(
-                //   TextSpan(
-                //     text: "Pizza Palooza Because Ordinary Isn't an Option",
-                //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)"
-                //   )
+                
                 TextSpan(
-                    text: "Pizza",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
+                    text: "Pizza\n",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
                     children: [
                   TextSpan(
-                    text: "Palooza",
+                    text: "Palooza ",
                     style: TextStyle(
                         color: Colors.green,
                         fontWeight: FontWeight.bold,
                         fontSize: 45),
                   ),
+                  
                   TextSpan(
                       text: "Because Ordinary Isn't an Option",
                       style:
