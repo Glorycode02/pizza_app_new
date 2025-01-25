@@ -43,24 +43,27 @@ class HomePage extends StatelessWidget {
           children: [
             const Text(
               "Pizza Palooza Because Ordinary Isn't an Option",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
             ),
-            GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 20,
-                    mainAxisSpacing: 20),
-                itemCount: 4,
-                itemBuilder: (context, index) {
-                  return Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                        image: AssetImage("assets/image${index + 1}.jpg"),
+            Expanded(
+              child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20),
+                  itemCount: 4,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                          image: AssetImage("assets/image${index + 1}.jpg"),
+                          fit: BoxFit.cover
+                        ),
                       ),
-                    ),
-                  );
-                }),
+                    );
+                  }),
+            ),
             MaterialButton(
               onPressed: () {
                 Navigator.pushNamed(context, "/login");
