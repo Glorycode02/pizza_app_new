@@ -45,6 +45,22 @@ class HomePage extends StatelessWidget {
               "Pizza Palooza Because Ordinary Isn't an Option",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
             ),
+            GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 20,
+                    mainAxisSpacing: 20),
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      image: DecorationImage(
+                        image: AssetImage("assets/image${index + 1}.jpg"),
+                      ),
+                    ),
+                  );
+                }),
             MaterialButton(
               onPressed: () {
                 Navigator.pushNamed(context, "/login");
@@ -52,12 +68,18 @@ class HomePage extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 height: 50,
-                decoration: BoxDecoration(color: Colors.green,borderRadius: BorderRadius.circular(12),),
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.circular(12),
+                ),
                 child: const Center(
-                  child: Text("Go to login page",style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),),
+                  child: Text(
+                    "Go to login page",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ),
             ),
