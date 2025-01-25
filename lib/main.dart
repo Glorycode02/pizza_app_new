@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pizza_app/components/my_drawer.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(
+    const MainApp());
 }
 
 class MainApp extends StatelessWidget {

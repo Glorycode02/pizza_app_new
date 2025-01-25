@@ -8,12 +8,14 @@ class MyDrawer extends StatelessWidget {
     return const Drawer(
       backgroundColor: Colors.grey,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           //logo
           Icon(
             Icons.lock_open_rounded,
-            size: 40,
+            size: 72,
           ),
+          SizedBox(height: 25,)
         ],
       ),
     );
