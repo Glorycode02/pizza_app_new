@@ -23,13 +23,13 @@ class _MainAppState extends State<MainApp> {
         "/login": (context) => const LoginPage(),
         "/signup": (context) => const SignupPage(),
       },
-      home:  HomePage(),
+      home: HomePage(),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
-   HomePage({super.key});
+  const HomePage({super.key});
 
 //  final  List _imagePath = [
 // "assets/images/image1.jpg"
@@ -53,10 +53,27 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              "Pizza Palooza Because Ordinary Isn't an Option",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-            ),
+            const Text.rich(
+                //   TextSpan(
+                //     text: "Pizza Palooza Because Ordinary Isn't an Option",
+                //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)"
+                //   )
+                TextSpan(
+                    text: "Pizza",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
+                    children: [
+                  TextSpan(
+                    text: "Palooza",
+                    style: TextStyle(
+                        color: Colors.green,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 45),
+                  ),
+                  TextSpan(
+                      text: "Because Ordinary Isn't an Option",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 45))
+                ])),
             // Expanded(
             //   child: GridView.builder(
             //       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
