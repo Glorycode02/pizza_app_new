@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pizza_app/pages/home_page.dart';
 import 'package:pizza_app/pages/login_page.dart';
 import 'package:pizza_app/pages/signup_page.dart';
 
@@ -22,14 +23,15 @@ class _MainAppState extends State<MainApp> {
       routes: {
         "/login": (context) => const LoginPage(),
         "/signup": (context) => const SignupPage(),
+        "/homepage": (context) => const HomePage()
       },
-      home: const HomePage(),
+      home: const LandingPage(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class LandingPage extends StatelessWidget {
+  const LandingPage({super.key});
 
 //  final  List _imagePath = [
 // "assets/images/image1.jpg"
@@ -42,9 +44,21 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "PIZZA",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+        title: const Text.rich(
+          TextSpan(
+            text: "PI",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+            children: [
+              TextSpan(
+                text: "Z",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30,color: Colors.green),
+              ),
+              TextSpan(
+                text: "ZA",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+              )
+            ],
+          ),
         ),
       ),
       body: Padding(
@@ -53,12 +67,10 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text.rich(
-                
-                TextSpan(
-                    text: "Pizza\n",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
-                    children: [
+            const Text.rich(TextSpan(
+                text: "Pizza\n",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
+                children: [
                   TextSpan(
                     text: "Palooza ",
                     style: TextStyle(
@@ -66,7 +78,6 @@ class HomePage extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontSize: 45),
                   ),
-                  
                   TextSpan(
                       text: "Because Ordinary Isn't an Option",
                       style:
@@ -104,7 +115,7 @@ class HomePage extends StatelessWidget {
                 ),
                 child: const Center(
                   child: Text(
-                    "Go to login page",
+                    "Get Started !!!",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
