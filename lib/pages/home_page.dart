@@ -57,11 +57,31 @@ class HomePage extends StatelessWidget {
                     style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                   ),
                 ),
-                Text("Your perfect delivery on time is our mission🔥🔥🔥🔥",style: TextStyle(
-                  color: Colors.grey,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20
-                ),)
+                Text(
+                  "Your perfect delivery on time is our mission🔥🔥🔥🔥,Lets work together to get onto our perfect company!!!",
+                  style: TextStyle(
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Text.rich(
+                  TextSpan(
+                    text: "Top ",
+                    style: TextStyle(fontSize: 30),
+                    children: [
+                      TextSpan(
+                          text: "Products",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30,
+                              color: Colors.green))
+                    ],
+                  ),
+                ),
+                SizedBox(height: 50,),
               ],
             ),
           )
