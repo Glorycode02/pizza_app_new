@@ -56,7 +56,8 @@ class HomePage extends StatelessWidget {
                   Center(
                     child: Text(
                       "Welcome to Pizza! 🍕, get your favourite pizza delivery on our Web!!!",
-                      style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                     ),
                   ),
                   Text(
@@ -83,8 +84,27 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 50,),
-                  ProductCard(productimage: "assets/images/image2.jpg")
+                  SizedBox(
+                    height: 50,
+                  ),
+                  ProductCard(
+                    productimage: "assets/images/image2.jpg",
+                    productName: "Classic Margherita Pizza",
+                    price: 12.99,
+                    discount: 10,
+                  ),
+                  ProductCard(
+                    productimage: "assets/images/image3.jpg",
+                    productName: "Pepperoni Feast",
+                    price: 15.99,
+                    discount: 15,
+                  ),
+                  ProductCard(
+                    productimage: "assets/images/image4.jpg",
+                    productName: "BBQ Chicken Pizza",
+                    price: 18.99,
+                    discount: 20,
+                  ),
                 ],
               ),
             )
