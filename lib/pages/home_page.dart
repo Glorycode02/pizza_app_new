@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pizza_app/components/my_drawer.dart';
+import 'package:pizza_app/components/product_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -81,7 +82,8 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 50,),
+                // SizedBox(height: 50,),
+                ProductCard(productimage: "assets/images/image2.jpg")
               ],
             ),
           )
